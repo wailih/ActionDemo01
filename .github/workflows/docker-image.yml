@@ -16,19 +16,19 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag inteltrainingacr02.azurecr.io/wlactiondemo01:latest
+      run: docker build . --file Dockerfile --tag sidlabacr03.azurecr.io/wlactiondemo01:latest
    
     - name: Azure Container Registry Login
       uses: Azure/docker-login@v1
       with:
         # Container registry username
-        username: inteltrainingacr02 
+        username: sidlabacr03 
         # Container registry password
-        password: HLZa5bnTqoy34=3CbvjqBQhBAL3PnSwe
+        password: JFHb3IFYta5QZxR44XzU6j=ch6OhS9GI
         # Container registry server url
-        login-server: inteltrainingacr02.azurecr.io
+        login-server: sidlabacr03.azurecr.io
     - name: Push the Docker image
-      run: docker push inteltrainingacr02.azurecr.io/wlactiondemo01:latest
+      run: docker push sidlabacr03.azurecr.io/wlactiondemo01:latest
  
  
   deploy:
