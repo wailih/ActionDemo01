@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: wlactiondemo01-container
-        image: inteltrainingacr02.azurecr.io/wlactiondemo01:latest
+        image: sidlabacr03.azurecr.io/wlactiondemo01:latest
         resources:
           limits:
             memory: "128Mi"
