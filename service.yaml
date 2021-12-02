@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: actiondemo01-service
+  name: wlactiondemo01-service
 spec:
   selector:
-    app: actiondemo01-pod
+    app: wlactiondemo01-pod
   ports:
   - port: 5000
     targetPort: 5000
