@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag inteltrainingacr02.azurecr.io/actiondemo01:latest
+      run: docker build . --file Dockerfile --tag inteltrainingacr02.azurecr.io/wlactiondemo01:latest
    
     - name: Azure Container Registry Login
       uses: Azure/docker-login@v1
@@ -28,7 +28,7 @@ jobs:
         # Container registry server url
         login-server: inteltrainingacr02.azurecr.io
     - name: Push the Docker image
-      run: docker push inteltrainingacr02.azurecr.io/actiondemo01:latest
+      run: docker push inteltrainingacr02.azurecr.io/wlactiondemo01:latest
  
  
   deploy:
