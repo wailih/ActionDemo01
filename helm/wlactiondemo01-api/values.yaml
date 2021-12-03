@@ -19,7 +19,7 @@ pvc:
   name: "wlactiondemo0pvc"
 
 image:
-  repository: "inteltrainingacr01.azurecr.io/newday01"
+  repository: "sidlabacr03.azurecr.io/wlactiondemo01"
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 imagePullSecrets:
