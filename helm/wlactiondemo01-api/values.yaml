@@ -2,7 +2,7 @@ replicaCount: 2
 k8s:
   namespace: "default"
 app:
-  name: "newday01-api"
+  name: "wlactiondemo01-api"
 service:
   port: "5000"
 metrics:
@@ -14,9 +14,9 @@ memory:
   target: "413Mi"
   #This is 85% of the memory limit set.
 pv:
-  name: "newday01sc"
+  name: "wlactiondemo0sc"
 pvc:
-  name: "newday01pvc"
+  name: "wlactiondemo0pvc"
 
 image:
   repository: "inteltrainingacr01.azurecr.io/newday01"
