@@ -43,9 +43,9 @@ jobs:
       run: helm package ./helm/wlactiondemo01-api
     - name: save helm chart to local registry
       run: |
-        helm chart save ./wlactiondemo01-api-0.1.0.tgz sidlabaks03.azurecr.io/charts-wlactiondemo01-api:latest        
+        helm chart save ./wlactiondemo01-api-0.1.0.tgz sidlabacr03.azurecr.io/charts-wlactiondemo01-api:latest        
     - name: Helm Chart Push
-      run: helm chart push sidlabaks03.azurecr.io/charts-wlactiondemo01-api:latest
+      run: helm chart push sidlabacr03.azurecr.io/charts-wlactiondemo01-api:latest
 
 
 #  deploy:
