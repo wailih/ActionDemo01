@@ -1,0 +1,28 @@
+//set environment variable HEL_EXPERIMENTAL_OCI to run helm chart & registry commands
+setx HELM_EXPERIMENTAL_OCI "1" /M
+or
+export HELM_EXPERIMENTAL_OCI=1
+
+
+//package helm chart
+helm package <path of helm chart>
+helm package ./helm/newday01-api
+
+
+//acr login through helm
+helm registry login <acr server name>
+helm registry login inteltrainingacr01.azurecr.io
+
+
+//tag helm chart with acr name
+helm chart save <helm package tgz file path> <acr login server name / chart name>
+helm chart save ./newday01-api-0.1.0.tgz inteltrainingacr01.azurecr.io/charts-newday01-api:latest
+
+
+//push helm chart to acr
+helm chart push <tagged helm chart name>
+helm chart push inteltrainingacr01.azurecr.io/charts-newday01-api:latest
+
+//helm install or upgrade
+helm upgrade --namespace <ns-name> --install --set image.tag=<img-tag> <release-name> <chart-name>
+helm upgrade --namespace default --install --set image.tag=latest newday01-api newday01-api
