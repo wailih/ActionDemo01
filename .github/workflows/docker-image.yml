@@ -108,5 +108,5 @@ jobs:
       run: helm chart export sidlabacr03.azurecr.io/charts-wlactiondemo01-api:latest --destination ./install
       
     - name: Helm Chart Install
-      run: helm upgrade --namespace ns-dev-wl --install --set image.tag=latest wlactiondemo01-api ./install/wlactiondemo01-api # release name chart name
+      run: helm upgrade --namespace ns-dev --install --set image.tag=latest wlactiondemo01-api ./install/wlactiondemo01-api # release name chart name
       
